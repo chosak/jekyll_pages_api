@@ -16,7 +16,11 @@ RSpec.shared_context "create page" do
   end
 
   def create_static_file(baseurl, relative_path, content: nil)
-    site = instance_double(Jekyll::Site, baseurl: baseurl)
+    frontmatter_defaults = instance_double(Jekyll::FrontmatterDefaults)
+    allow(frontmatter_defaults).to receive(:all)
+
+    site = instance_double(Jekyll::Site, baseurl: baseurl,
+      frontmatter_defaults: frontmatter_defaults)
     if content.nil?
       jekyll_static_file = instance_double(Jekyll::StaticFile,
         relative_path: relative_path)

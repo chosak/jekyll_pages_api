@@ -9,3 +9,7 @@ end
 appraise "jekyll-3.1" do
   gem 'jekyll', '~> 3.1'
 end
+
+appraise "jekyll-3.8" do
+  gem 'jekyll', '~> 3.8'
+end
