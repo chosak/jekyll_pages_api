@@ -46,7 +46,8 @@ describe "integration" do
     urls = entries_data.map{|page| page['url'] }
 
     # not sure why this discrepancy exists...
-    if Jekyll::VERSION.start_with?('3.')
+    version = Gem::Version.new(Jekyll::VERSION)
+    if version >= Gem::Version.new('3')
       expect(urls).to eq(%w(
         /about/
         /

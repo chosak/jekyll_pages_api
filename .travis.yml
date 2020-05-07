@@ -6,4 +6,5 @@ gemfile:
 - gemfiles/jekyll_3.0.gemfile
 - gemfiles/jekyll_3.1.gemfile
 - gemfiles/jekyll_3.8.gemfile
+- gemfiles/jekyll_4.0.gemfile
 script: bundle exec rspec

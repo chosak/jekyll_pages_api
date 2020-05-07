@@ -14,3 +14,4 @@
 *.a
 mkmf.log
 .*.swp
+.jekyll-cache
