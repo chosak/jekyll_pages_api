@@ -42,5 +42,15 @@ module JekyllPagesApi
         end
       end
     end
+
+    def in_theme_dir(*paths)
+      return nil
+    end
+
+    def in_source_dir(*paths)
+      paths.reduce(basedir) do |base, path|
+        Jekyll.sanitized_path(base, path)
+      end
+    end
   end
 end
